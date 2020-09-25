@@ -1,0 +1,73 @@
+
+.container {
+    background-color: #ccc;
+    position: relative;
+}
+.container h1 {
+    margin: 0px;
+    padding: 20px;
+    text-align: center; 
+    font-size: 40px;
+}
+.container .pokedex {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.container .pokedex .card{
+    width: 200px;
+    margin: 15px;
+    box-shadow: 3px 3px 15px #333;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 2s;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+.container .pokedex .card:hover {
+    transform: rotateY(180deg);
+}
+.container .pokedex .front{
+    backface-visibility: hidden;
+}
+.container .pokedex .back{
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+}
+.container .pokedex .card .card-img {
+    width: 150px;
+    height: 150px;
+    justify-content: center;
+    margin-top: 10px;
+}
+.container .pokedex .card .card-title{
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0px;
+}
+
+.container .pokedex .card .card-subtitle{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    padding: 5px;
+    border-radius: 30px;
+    text-align: center;
+    display: inline-flex;
+}
+.container .pokedex .card .card-ability {
+    width: 150;
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+}
