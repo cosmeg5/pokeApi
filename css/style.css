@@ -1,22 +1,27 @@
-
-.container {
+body {
     background-color: #ccc;
-    position: relative;
 }
-.container h1 {
+header h1 {
     margin: 0px;
     padding: 20px;
     text-align: center; 
     font-size: 40px;
 }
-.container .pokedex {
+.container {
     align-items: center;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
 }
-.container .pokedex .card{
-    width: 200px;
+.pokedex {
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+    perspective: 1000px;
+}
+.pokedex .card {
+    width: 300px;
+    height:350px;
     margin: 15px;
     box-shadow: 3px 3px 15px #333;
     border-radius: 20px;
@@ -24,33 +29,32 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: transform 2s;
-    transform-style: preserve-3d;
-    perspective: 1000px;
 }
-.container .pokedex .card:hover {
+.pokedex:hover {
     transform: rotateY(180deg);
 }
-.container .pokedex .front{
+.pokedex .front{
+    position: absolute;
     backface-visibility: hidden;
 }
-.container .pokedex .back{
+.pokedex .back{
+    transform: rotateY(180deg);
     backface-visibility: hidden;
-    transform: rotateY(0deg);
 }
-.container .pokedex .card .card-img {
+.container  .card .card-img {
     width: 150px;
     height: 150px;
     justify-content: center;
     margin-top: 10px;
 }
-.container .pokedex .card .card-title{
+.container .card .card-title{
     font-size: 25px;
     font-weight: 700;
     margin: 0px;
+    font-variant: small-caps;
 }
 
-.container .pokedex .card .card-subtitle{
+.container .card .card-subtitle{
     color: #fff;
     font-size: 20px;
     font-weight: 500;
@@ -60,7 +64,7 @@
     text-align: center;
     display: inline-flex;
 }
-.container .pokedex .card .card-ability {
+.container .card .card-ability {
     width: 150;
     color: #000;
     font-size: 15px;
@@ -71,3 +75,30 @@
     justify-content: center;
     margin-top: 10px;
 }
+
+.stats {
+    margin: 10px 0px 2px 20px;
+    text-align: left;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.card .valores {
+    width: 250px;
+    height: 15px;
+    margin: 0px 0px 2px 20px;
+    background-color: #bbb;
+    position: relative;
+    font-size: 13px;
+}
+.card .valores p {
+    width: 250px;
+    height: 15px;
+    background-color: red;
+    margin: 0px 0px 2px 20px;
+    margin-left: 0;
+    position: absolute;
+    color: #fff;
+}
+
+
